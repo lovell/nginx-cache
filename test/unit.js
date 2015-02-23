@@ -8,7 +8,7 @@ var nginxCache = require('../');
 var cacheDir = path.join(__dirname, 'fixtures');
 
 describe('Constructor', function() {
-  
+
   it('Missing directory', function() {
     var isValid = true;
     try {
@@ -146,5 +146,5 @@ describe('Find', function() {
         assert.strictEqual(2, matchCount);
         done();
       });
-  });  
+  });
 });

@@ -6,11 +6,19 @@ as efficiently as possible
 looking for partial URL key matches
 based on a regular expression.
 
+## Install
+
+```sh
+npm install nginx-cache
+```
+
 ## Usage example
 
 Purge all CSS files from an Nginx cache:
 
 ```javascript
+var nginxCache = require('nginx-cache');
+
 nginxCache('/var/www/cache')
   .find(/.css$/)
   .on('match', function(file, url) {
