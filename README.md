@@ -29,7 +29,7 @@ nginxCache('/var/www/cache')
       }
     });
   })
-  .on('error'), function(err) {
+  .on('error', function(err) {
     console.log(err.message);
   })
   .on('finish', function() {
