@@ -89,7 +89,7 @@ which may be more suitable.
 
 ## Licence
 
-Copyright 2015 Lovell Fuller.
+Copyright 2015 Dispatches LLP.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
