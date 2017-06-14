@@ -1,2 +1,4 @@
 node_modules
 coverage
+.travis.yml
+.nyc_output

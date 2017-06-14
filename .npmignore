@@ -1,7 +1,6 @@
 node_modules
 coverage
-.jshintignore
-.jshintrc
 .gitignore
 test
 .travis.yml
+.nyc_output

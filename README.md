@@ -17,9 +17,9 @@ npm install nginx-cache
 Purge all CSS files from an Nginx cache:
 
 ```javascript
-var nginxCache = require('nginx-cache');
+var NginxCache = require('nginx-cache');
 
-nginxCache('/var/www/cache')
+NginxCache('/var/www/cache')
   .find(/.css$/)
   .on('match', function(file, url) {
     console.log('Attempting to remove cached version of ' + url);
@@ -39,7 +39,7 @@ nginxCache('/var/www/cache')
 
 ## API
 
-### nginxCache(directory)
+### NginxCache(directory)
 
 Constructor to which further methods are chained.
 
@@ -89,7 +89,7 @@ which may be more suitable.
 
 ## Licence
 
-Copyright 2015 Dispatches LLP.
+Copyright 2015, 2017 Dispatches LLP.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
