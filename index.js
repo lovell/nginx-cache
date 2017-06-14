@@ -117,7 +117,7 @@ nginxCache.prototype._findFile = function(file, pattern) {
           }
         }
         // Close file descriptor
-        fs.close(fd);
+        fs.close(fd, function() { });
         // Decrement depth counter
         that.depth--;
         if (that.depth === 0) {
