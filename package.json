@@ -9,7 +9,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/dimensio/nginx-cache"
+    "url": "git://github.com/lovell/nginx-cache"
   },
   "keywords": [
     "nginx",
@@ -18,11 +18,8 @@
     "find",
     "purge"
   ],
-  "dependencies": {
-    "async": "^2.4.1"
-  },
   "devDependencies": {
-    "mocha": "^3.4.2",
+    "mocha": "^4.0.1",
     "nyc": "^11.0.2",
     "semistandard": "^11.0.0"
   },

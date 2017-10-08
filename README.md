@@ -12,12 +12,16 @@ based on a regular expression.
 npm install nginx-cache
 ```
 
+```sh
+yarn add nginx-cache
+```
+
 ## Usage example
 
 Purge all CSS files from an Nginx cache:
 
 ```javascript
-var NginxCache = require('nginx-cache');
+const NginxCache = require('nginx-cache');
 
 NginxCache('/var/www/cache')
   .find(/.css$/)

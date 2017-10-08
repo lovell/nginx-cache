@@ -5,7 +5,17 @@ const path = require('path');
 const util = require('util');
 const events = require('events');
 
-const async = require('async');
+const eachSeries = function (coll, iteratee, callback) {
+  const len = coll.length;
+  let index = 0;
+  const next = function (err) {
+    if (index === len || err) {
+      return callback(err);
+    }
+    iteratee(coll[index++], next);
+  };
+  next();
+};
 
 /*
   Constructor - requires path to cache directory
@@ -61,7 +71,7 @@ NginxCache.prototype._findDirectory = function (directory, pattern) {
       }
     } else {
       // Loop over children, limiting the number of files open at once
-      async.eachSeries(files, function (file, done) {
+      eachSeries(files, function (file, done) {
         const child = path.join(directory, file);
         fs.stat(child, function (err, stat) {
           if (err) {
